@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+    transition-duration: 2s;
+    border-width: 1px;
+}
+
+body {
+    font-size: 15pt;
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    background-color: #1b1b1b;
+}
+
+#container {
+    position: fixed;
+    left: 10vw;
+    width: 80vw;
+    height: 60vh;
+    top: 10vw;
+    box-shadow: 0 0 5px #000;
+    display: flex;
+    flex-direction: column;
+    border: solid black;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#upload {
+    height: 20%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#upload>i {
+    width: 50%;
+    background-color: #20262b;
+    font-size: 150%;
+    color:#ffffff !important;
+    border: solid #2F304096;
+}
+
+.fa-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px 0 0 20px;
+    border-style: solid;
+}
+
+.fa-camera {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 20px 20px 0;
+    border-style: solid;
+}
+
+#myCanvas {
+    height: 80%;
+    width: 100%;
+    background-color: none;
+}
+
+#base {
+    position: fixed;
+    width: 100%;
+    height: calc(30vh - 20vw);
+    background-color: none;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 10vw 15px 10vw;
+    gap: 20px;
+}
+
+#color {
+    width: 30%;
+    height: 100%;
+    background-color: none;
+    border-radius: 2px;
+    border-style: solid;
+    transition-duration: 0s !important;
+    border-width: 1px;
+    border-color:black;
+    box-shadow: 0 0 5px #000;
+}
+
+#cd {
+    width: 70%;
+    height: 100%;
+    background-color: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 2px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    color:#5195dd;
+    box-shadow: 0 0 5px #000;
+}
+
+@media only screen and (min-width: 600px) {
+    #container {
+        left: 10vh;
+        width: 70vw;
+        height: 80vh;
+        top: 10vh;
+        flex-direction: row;
+    }
+
+    #upload {
+        flex-direction: column;
+        height: 100%;
+        width: 20%;
+    }
+
+    #upload>i {
+        height: 50%;
+        width: 100%;
+    }
+
+    .fa-image {
+        border-radius: 20px 20px 0 0;
+    }
+
+    .fa-camera {
+        border-radius: 0 0 20px 20px;
+    }
+
+    #myCanvas {
+        width: 80%;
+        height: 100%;
+    }
+
+    #base {
+        width: calc(30vw - 30vh);
+        height: 100vh;
+        right: 0;
+        flex-direction: column;
+        padding: 10vh 15px 10vh 15px;
+    }
+
+    #color {
+        height: 30%;
+        width: 100%;
+    }
+
+    #cd {
+        height: 70%;
+        width: 100%;
+    }
+}
+
+#marker{
+    position: fixed;
+    top: calc(50% - 10px);
+    left: calc(50% - 10px);
+    width: 20px;
+    height: 20px;
+    background-color: none;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2px;
+    transition-duration: 0s !important;
+    display: block;
+    opacity: 0.5;
+    border-color:#eeeeee;
+}
+#marker:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-style: solid none solid none;
+    border-width: 0.5px;
+    top: calc(50% - 0.5px);
+    left: 0;
+    border-color:#eeeeee;
+}
+#marker:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    border-style: none solid;
+    border-width: 0.5px;
+    left: calc(50% - 0.5px);
+    top: 0;
+    border-color:#eeeeee;
+}
